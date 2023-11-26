@@ -2,6 +2,7 @@ import { View } from 'react-native';
 import LittleLemonHeader from './components/LittleLemonHeader';
 import Footer from './components/Footer';
 import Welcome from './components/Welcome';
+import MenuItems from './components/MenuItems';
 
 export default function App() {
   return (
@@ -9,11 +10,12 @@ export default function App() {
       style={{
         flex: 1,
         backgroundColor: '#495E57',
-        justifyContent: "space-between"
+        // justifyContent: "space-between"
       }}>
       <LittleLemonHeader />
-      <Welcome />
-      <Footer />
+      {/* <Welcome /> */}
+      <MenuItems />
+      {/* <Footer /> */}
     </View>
   );
 }
