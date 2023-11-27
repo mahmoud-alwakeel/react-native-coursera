@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 
 export default Welcome = () => {
     return(
-        <View style={{flex:1}}>
+        <View style={{flex:1, color: "#333333"}}>
             <Text style={{
                 paddingTop: 40,
                 color: "white",
