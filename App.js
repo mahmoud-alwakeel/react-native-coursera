@@ -6,6 +6,7 @@ import MenuItems from './components/MenuItems';
 
 export default function App() {
   return (
+    <>
     <View
       style={
         styles.container
@@ -13,8 +14,11 @@ export default function App() {
       <LittleLemonHeader />
       {/* <Welcome /> */}
       <MenuItems />
-      {/* <Footer /> */}
     </View>
+    <View style={styles.footerContainer}>
+      <Footer />
+    </View>
+    </>
   );
 }
 
@@ -24,4 +28,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#333333',
     // justifyContent: "space-between"
   },
+  footerContainer: { backgroundColor: '#333333' },
 })
