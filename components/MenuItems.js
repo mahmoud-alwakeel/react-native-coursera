@@ -24,6 +24,14 @@ const menuItemsToDisplay = [
     { name: 'Panna Cotta', price: '$5.00', id: '21V' },
 ]
 
+const Separator = () => <View style={menuStyles.separator}/>
+
+const Header = () => <Text style={menuStyles.headerText}> Menu Items</Text>
+
+const Footer = () => (
+    <Text style={menuStyles.footerText}>All rights reserved by Litte Lemon, 2023 </Text>
+)
+
 const Item= ({name, price}) => (
     <View style={menuStyles.innerContainer}>
         <Text style={menuStyles.itemText}>{name}</Text>
@@ -36,10 +44,14 @@ const MenuItems = () => {
     const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
     return(
         <View style={menuStyles.menuContainer}>
-            <Text style={menuStyles.headerText}> Menu Items</Text>
+            
             <FlatList data={menuItemsToDisplay}
             keyExtractor={item => item.id} 
-            renderItem={renderItem}> </FlatList>
+            renderItem={renderItem}
+            ListHeaderComponent={Header}
+            ItemSeparatorComponent={Separator}
+            ListFooterComponent={Footer}
+            ></FlatList>
         </View>
     )
 }
@@ -55,6 +67,10 @@ const menuStyles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between"
     },
+    separator: {
+        borderBottomWidth: 1,
+        borderColor: "#EDEFEE"
+    },
     headerText: {
         fontSize: 40,
         flexWrap: "wrap",
@@ -65,6 +81,11 @@ const menuStyles = StyleSheet.create({
         fontSize: 30,
         padding: 10
         },
+        footerText:{
+            color: "#EDEFEE",
+            fontSize: 20,
+            flexWrap:"wrap",
+        }
 })
 
 export default MenuItems
