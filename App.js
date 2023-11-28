@@ -3,6 +3,7 @@ import LittleLemonHeader from './components/LittleLemonHeader';
 import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 import MenuItems from './components/MenuItems';
+import MenuItemsSection from './components/MenuItemsSection';
 
 export default function App() {
   return (
@@ -13,11 +14,12 @@ export default function App() {
       }>
       <LittleLemonHeader />
       {/* <Welcome /> */}
-      <MenuItems />
+      {/* <MenuItems /> */}
+      <MenuItemsSection />
     </View>
-    <View style={styles.footerContainer}>
+    {/* <View style={styles.footerContainer}>
       <Footer />
-    </View>
+    </View> */}
     </>
   );
 }
