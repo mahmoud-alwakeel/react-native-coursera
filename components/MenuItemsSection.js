@@ -48,7 +48,7 @@ const Separator = () => <View style={menuStylesSection.separator}/>
 
 const Footer = () => (
     <Text style={menuStylesSection.footerText}>
-      All Rights Reserved by Little Lemon 2022
+      All Rights Reserved by Little Lemon 2023
     </Text>
   );
   
@@ -63,7 +63,9 @@ export default MenuItemsSection = () => {
     const renderItem = ({item}) => <Item name={item.name} price={item.price}/>
 
     const renderSectionHeader = ({section: {title}}) => (
-        <Text style={menuStylesSection.headerText}>{title}</Text>
+        <View style={menuStylesSection.headerStyle}>
+            <Text style={menuStylesSection.headerText}>{title}</Text>
+        </View>
     ) 
     return(
         <View style={menuStylesSection.menuContainer}>
@@ -98,7 +100,11 @@ const menuStylesSection = StyleSheet.create({
         fontSize: 40,
         flexWrap: "wrap",
         color: "white",
+        textAlign: "center"
     },
+    headerStyle: {
+        backgroundColor: '#F4CE90',
+      },
     itemText: {
         color: "#F4CE14", 
         fontSize: 30,
