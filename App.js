@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 import MenuItems from './components/MenuItems';
 import MenuItemsSection from './components/MenuItemsSection';
+import FeedBackForm from './components/feedbackform';
 
 export default function App() {
   return (
@@ -13,13 +14,14 @@ export default function App() {
         styles.container
       }>
       <LittleLemonHeader />
-      {/* <Welcome /> */}
-      {/* <MenuItems /> */}
-      <MenuItemsSection />
+      <FeedBackForm />
+      {/* <Welcome /> 
+       <MenuItems />
+      <MenuItemsSection /> */}
     </View>
-    {/* <View style={styles.footerContainer}>
+    <View style={styles.footerContainer}>
       <Footer />
-    </View> */}
+    </View>
     </>
   );
 }
